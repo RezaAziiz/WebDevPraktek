@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DramaKu - Admin Users</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-1/5 bg-gray-800 min-h-screen p-4">
+            <div class="mb-4 text-2xl font-bold">DramaKu</div>
+            <ul class="space-y-2">
+                <li><a href="#" class="block p-2 hover:bg-gray-700">Dramas</a></li>
+                <li><a href="cmscountries.html" class="block p-2 hover:bg-gray-700">Countries</a></li>
+                <li><a href="cmsawards.html" class="block p-2 hover:bg-gray-700">Awards</a></li>
+                <li><a href="#" class="block p-2 hover:bg-gray-700">Genres</a></li>
+                <li><a href="cmsactors.html" class="block p-2 hover:bg-gray-700">Actors</a></li>
+                <li><a href="cmscomments.html" class="block p-2 hover:bg-gray-700">Comments</a></li>
+                <li><a href="cmsusers.html" class="block py-2 px-4 rounded bg-gray-700 hover:bg-gray-700">Users</a></li>
+                <li><a href="#" class="block p-2 hover:bg-gray-700">Logout</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main content -->
+        <main class="flex-1 p-6">
+            <!-- Form Section -->
+            <div class="bg-purple-800 p-4 rounded mb-6">
+                <form class="flex space-x-4 items-center">
+                    <div>
+                        <label for="username" class="block text-white mb-2">Username</label>
+                        <input type="text" id="username" class="bg-gray-700 p-2 rounded text-white w-full">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-white mb-2">Email</label>
+                        <input type="email" id="email" class="bg-gray-700 p-2 rounded text-white w-full">
+                    </div>
+                    <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4">Submit</button>
+                </form>
+            </div>
+
+            <!-- Users Table with vertical scroll -->
+            <div class="max-h-60 overflow-y-auto bg-gray-800 rounded-lg shadow-lg">
+                <table class="min-w-full text-left border-collapse rounded-lg">
+                    <thead>
+                        <tr class="bg-gray-700 rounded-t-lg">
+                            <th class="p-3 text-white">#</th>
+                            <th class="p-3 text-white">Username</th>
+                            <th class="p-3 text-white">Email</th>
+                            <th class="p-3 text-white">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="rounded-b-lg">
+                        <tr class="bg-gray-800">
+                            <td class="p-3 border-t border-gray-700">1</td>
+                            <td class="p-3 border-t border-gray-700">ariel21</td>
+                            <td class="p-3 border-t border-gray-700">ariel21@gmail.com</td>
+                            <td class="p-3 border-t border-gray-700">
+                                <a href="#" class="text-blue-400 hover:text-blue-600">Send first email</a> |
+                                <a href="#" class="text-yellow-400 hover:text-yellow-600">Edit</a> |
+                                <a href="#" class="text-red-400 hover:text-red-600">Delete</a>
+                            </td>
+                        </tr>
+                        <!-- Tambahkan lebih banyak baris disini untuk menguji scrolling -->
+                        <tr class="bg-gray-800">
+                            <td class="p-3 border-t border-gray-700">2</td>
+                            <td class="p-3 border-t border-gray-700">borang</td>
+                            <td class="p-3 border-t border-gray-700">borang@yahoo.com</td>
+                            <td class="p-3 border-t border-gray-700">
+                                <a href="#" class="text-blue-400 hover:text-blue-600">Send first email</a> |
+                                <a href="#" class="text-yellow-400 hover:text-yellow-600">Edit</a> |
+                                <a href="#" class="text-red-400 hover:text-red-600">Delete</a>
+                            </td>
+                        </tr>
+                        <!-- Tambahkan lebih banyak baris disini untuk menguji scrolling -->
+                        <tr class="bg-gray-800">
+                            <td class="p-3 border-t border-gray-700">2</td>
+                            <td class="p-3 border-t border-gray-700">borang</td>
+                            <td class="p-3 border-t border-gray-700">borang@yahoo.com</td>
+                            <td class="p-3 border-t border-gray-700">
+                                <a href="#" class="text-blue-400 hover:text-blue-600">Send first email</a> |
+                                <a href="#" class="text-yellow-400 hover:text-yellow-600">Edit</a> |
+                                <a href="#" class="text-red-400 hover:text-red-600">Delete</a>
+                            </td>
+                        </tr>
+                        <tr class="bg-gray-800">
+                            <td class="p-3 border-t border-gray-700">2</td>
+                            <td class="p-3 border-t border-gray-700">borang</td>
+                            <td class="p-3 border-t border-gray-700">borang@yahoo.com</td>
+                            <td class="p-3 border-t border-gray-700">
+                                <a href="#" class="text-blue-400 hover:text-blue-600">Send first email</a> |
+                                <a href="#" class="text-yellow-400 hover:text-yellow-600">Edit</a> |
+                                <a href="#" class="text-red-400 hover:text-red-600">Delete</a>
+                            </td>
+                        </tr>
+                        <tr class="bg-gray-800">
+                            <td class="p-3 border-t border-gray-700">2</td>
+                            <td class="p-3 border-t border-gray-700">borang</td>
+                            <td class="p-3 border-t border-gray-700">borang@yahoo.com</td>
+                            <td class="p-3 border-t border-gray-700">
+                                <a href="#" class="text-blue-400 hover:text-blue-600">Send first email</a> |
+                                <a href="#" class="text-yellow-400 hover:text-yellow-600">Edit</a> |
+                                <a href="#" class="text-red-400 hover:text-red-600">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DramaKu - Detail Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+   <!-- Header -->
+<!-- Header -->
+<header class="p-4 relative bg-gray-800">
+    <div class="absolute left-4 top-1/2 transform -translate-y-1/2">
+      <img src="img_src/fixlogo.png" alt="Orange Circle" class="h-14">
+    </div>
+    <div class="flex justify-center">
+      <input type="text" placeholder="Search Drama" class="p-2 rounded bg-gray-700 text-white w-72">
+    </div>
+  </header>
+  
+  
+    <!-- Main Content -->
+<main class="p-8 max-w-6xl mx-auto">
+    <!-- Drama Info Section -->
+    <div class="flex flex-col md:flex-row gap-8">
+        <div class="flex-none w-full md:w-1/5"> <!-- Change width to 1/4 -->
+            <img src="https://via.placeholder.com/300x400" alt="Drama Poster" class="w-full h-auto rounded shadow-lg mb-4"> <!-- Use w-full and h-auto to control the size -->
+        </div>
+        <div class="flex-grow">
+            <h1 class="text-3xl font-bold mb-2">Judul</h1>
+            <p class="text-sm text-gray-400 mb-2">Other titles: Title 2, Title 3, Title 4</p>
+            <p class="text-sm text-gray-400 mb-4">Year: Spring 2016</p>
+            <p class="text-sm text-gray-200 mb-4">When an unprecedented heinous criminal is released from prison, a public bounty with a payout of 20 billion won is offered for his murder...</p>
+            <p class="text-sm text-gray-200 mb-2">Genres: Action, Thriller, Horror</p>
+            <p class="text-sm text-gray-200 mb-2">Rating: 3.5/5</p>
+            <p class="text-sm text-gray-400">Availability: Fansub: @solsub on X</p>
+        </div>
+    </div>
+
+
+        <!-- Stars Section -->
+<div class="my-8 text-center">
+    <h2 class="text-2xl font-bold mb-4">Stars</h2>
+    <div class="flex justify-center space-x-4 overflow-x-auto">
+        <div class="flex flex-col items-center">
+            <img src="https://via.placeholder.com/100" alt="Actor 1" class="w-20 h-20 bg-gray-700 rounded-full mb-2">
+            <p>Song Joong Ki</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="https://via.placeholder.com/100" alt="Actor 2" class="w-20 h-20 bg-gray-700 rounded-full mb-2">
+            <p>Kim Ji Won</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="https://via.placeholder.com/100" alt="Actor 3" class="w-20 h-20 bg-gray-700 rounded-full mb-2">
+            <p>Son Hye Kyo</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="https://via.placeholder.com/100" alt="Actor 4" class="w-20 h-20 bg-gray-700 rounded-full mb-2">
+            <p>Jin Goo</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="https://via.placeholder.com/100" alt="Actor 5" class="w-20 h-20 bg-gray-700 rounded-full mb-2">
+            <p>Hana</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <img src="https://via.placeholder.com/100" alt="Actor 6" class="w-20 h-20 bg-gray-700 rounded-full mb-2">
+            <p>Actor 1</p>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Video Section -->
+        <div class="bg-gray-800 rounded mb-8 p-10">
+            <div class= "flex items-center justify-center">
+                <img src="https://via.placeholder.com/600x300" alt="Drama Video" class="rounded shadow-lg">
+            </div>
+        </div>
+
+        <!-- Comments Section -->
+<div class="bg-gray-800 p-4 rounded mb-8">
+    <h2 class="text-2xl font-bold mb-4">People think about this drama</h2>
+    <div class="flex justify-between items-center mb-4">
+        <p>(4) Comments</p>
+        <select class="bg-gray-700 text-white p-2 rounded">
+            <option>Filter by: ★★★★★</option>
+        </select>
+    </div>
+    <!-- Make this section scrollable -->
+    <div class="space-y-4 max-h-60 overflow-y-auto"> <!-- Added max-h-60 and overflow-y-auto -->
+        <!-- Comment -->
+        <div class="border-b border-gray-700 pb-4">
+            <p class="text-sm text-gray-400">Nara (4/24/2016) said:</p>
+            <p class="mb-2">It is a wonderful drama! I Love it so much!!!</p>
+            <div class="text-yellow-500">★★★★★</div>
+        </div>
+        <!-- Duplicate comments for demo purposes -->
+        <div class="border-b border-gray-700 pb-4">
+            <p class="text-sm text-gray-400">Nara (4/24/2016) said:</p>
+            <p class="mb-2">It is a wonderful drama! I Love it so much!!!</p>
+            <div class="text-yellow-500">★★★★★</div>
+        </div>
+        <div class="border-b border-gray-700 pb-4">
+            <p class="text-sm text-gray-400">Nara (4/24/2016) said:</p>
+            <p class="mb-2">It is a wonderful drama! I Love it so much!!!</p>
+            <div class="text-yellow-500">★★★★★</div>
+        </div>
+        <div class="border-b border-gray-700 pb-4">
+            <p class="text-sm text-gray-400">Nara (4/24/2016) said:</p>
+            <p class="mb-2">It is a wonderful drama! I Love it so much!!!</p>
+            <div class="text-yellow-500">★★★★★</div>
+        </div>
+        <!-- Add more comments if needed -->
+    </div>
+</div>
+
+
+        <!-- Add Your Comment Section -->
+<div class="bg-gray-800 p-4 rounded max-w-md">
+    <h3 class="text-lg font-bold mb-2">Add yours!</h3>
+    <form class="space-y-4">
+        <input type="text" placeholder="Name" class="w-full p-2 bg-gray-700 rounded text-white">
+        <div class="flex items-center">
+            <span class="mr-2 text-white">Rate:</span>
+            <input type="number" min="1" max="5" class="bg-gray-700 p-2 rounded text-white w-16">
+        </div>
+        <textarea placeholder="Your thoughts" class="w-full p-2 bg-gray-700 rounded text-white"></textarea>
+        <button type="submit" class="w-full bg-blue-600 p-2 rounded text-white">Submit</button>
+    </form>
+</div>
+

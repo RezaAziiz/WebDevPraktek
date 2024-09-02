@@ -1,0 +1,16 @@
+{
+  "name": "tailwindexp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "npm": "^10.8.2",
+    "tailwindcss": "^3.4.10"
+  }
+}
