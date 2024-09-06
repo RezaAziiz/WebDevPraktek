@@ -1,18 +1,15 @@
-import { Outlet } from "react-router-dom";
-
 import React from 'react';
-import Header from './Headercmp.jsx'; // Import Header component
+import SearchMovie from './SearchMovie'; // Adjust the path if needed
 
 const DefaultLayout = ({ children }) => {
     return (
         <>
-            {/* Render Header on every page */}
-            <Header />
-            
-            {/* Main Content */}
-            <main>
-                {children}
-            </main>
+            <div className="bg-gray-900 min-h-screen"> {/* Apply Tailwind background and height class */}
+                <SearchMovie />
+                <main>
+                    {children}
+                </main>
+            </div>
         </>
     );
 };
