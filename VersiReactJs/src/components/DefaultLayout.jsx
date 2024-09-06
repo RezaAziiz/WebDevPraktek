@@ -1,10 +1,20 @@
 import { Outlet } from "react-router-dom";
 
-export default function DefaultLayout(){
+import React from 'react';
+import Header from './Headercmp.jsx'; // Import Header component
 
-    return(
+const DefaultLayout = ({ children }) => {
+    return (
+        <>
+            {/* Render Header on every page */}
+            <Header />
+            
+            {/* Main Content */}
+            <main>
+                {children}
+            </main>
+        </>
+    );
+};
 
-        <div>Default </div>
-    )
-
-}
+export default DefaultLayout;
