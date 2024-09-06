@@ -1,16 +1,20 @@
-import React from 'react';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import React, { useState } from 'react';
+import { RiSearchLine } from 'react-icons/ri'; // Importing the search icon from react-icons
 
 function SearchBar() {
+    const [searchText, setSearchText] = useState('');
+
     return (
         <div className="flex justify-center items-center h-20">
-            <div className="flex items-center bg-white rounded-full px-5 py-2 shadow-md">
+            <div className="flex items-center bg-white rounded-full px-5 py-1 shadow-md">
                 <input
                     type="text"
                     placeholder="Search"
-                    className="border-separate outline-none text-lg mr-2 w-80"
+                    value={searchText}
+                    onChange={e => setSearchText(e.target.value)}
+                    className="outline-none text-lg mr-2 w-96"
                 />
-                <i className="fas fa-search text-5xls text-gray-500"></i> {/* Font Awesome search icon */}
+                <RiSearchLine className="search-icon text-gray-500" /> {/* Using react-icons for search icon */}
             </div>
         </div>
     );

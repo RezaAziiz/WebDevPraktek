@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+.search-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}

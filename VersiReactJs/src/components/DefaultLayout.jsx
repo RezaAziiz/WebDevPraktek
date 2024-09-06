@@ -1,8 +1,8 @@
 import React from 'react';
-import SearchBar from './SearchBar'; // Adjust the path if needed
 
 // Import the image icon
 import logo from '../assets/logo.png'; // Adjust the path to your image
+import '../index.css'
 
 const DefaultLayout = ({ children }) => {
     return (
@@ -11,7 +11,7 @@ const DefaultLayout = ({ children }) => {
                 {/* Add a container for the icon */}
                 <div className="absolute top-0 left-0 p-4">
                     {/* Display the image */}
-                    <img src={logo} alt="Logo" className="h-30 w-40" /> {/* Adjust size as needed */}
+                    <img src={logo} alt="Logo" className="h-14 w-48" /> {/* Adjust size as needed */}
                 </div>
 
                 {/* Search bar and main content */}
