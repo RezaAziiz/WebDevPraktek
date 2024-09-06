@@ -1,4 +1,4 @@
-/*
+/* /*
 ! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com
 */
 
@@ -552,29 +552,4 @@ video {
   --tw-contain-layout:  ;
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
-}
-
-.flex {
-  display: flex;
-}
-
-.min-h-screen {
-  min-height: 100vh;
-}
-
-.border {
-  border-width: 1px;
-}
-
-.bg-gray-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-
-.p-8 {
-  padding: 2rem;
-}
-
-.outline {
-  outline-style: solid;
-}
+} 

@@ -2,11 +2,12 @@ import React from 'react';
 import DefaultLayout from '../components/DefaultLayout'; 
 import SearchBar from '../components/SearchBar';
 import myIcon from '../assets/mufasa-poster-1.webp'; 
+import FilterComponent from '../components/Filter';
 
 const DetailPage = () => {
     return (
         <DefaultLayout>
-            <SearchBar />
+            <SearchBar />  <FilterComponent/>
             <div className="main-content p-8 text-white">
                 {/* Title and Description */}
                 <div className="flex flex-col md:flex-row md:justify-between ">
