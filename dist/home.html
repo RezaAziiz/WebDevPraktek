@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Review Cards</title>
+    <title>Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -13,8 +13,7 @@
     <nav class="flex justify-between items-center bg-gray-900 p-4">
          <!-- Logo and DramaKu text moved to the left -->
          <div class="text-xl font-bold flex items-center">
-            <img src="/img_src/logo.png" class="w-12 h-12 mr-2" />
-            DramaKu
+            <img src="../dist/img_src/logo.png" class="w-40 h-10 mr-2" />
         </div>
     
         <div class="relative flex items-center">
@@ -113,7 +112,7 @@
                 <div id="slider" class="flex transition-transform ease-out duration-500">
                     <!-- Slide 1 -->
                     <div class="w-full flex-shrink-0 flex justify-center">
-                        <img src="https://via.placeholder.com/600x400" alt="Popular Movie 1" class="w-1/2 h-96 object-cover rounded-lg shadow-lg">
+                        <img src="../dist/img_src/divergent.png" alt="Popular Movie 1" class="w-1/2 h-96 object-cover rounded-lg shadow-lg">
                     </div>
                     <!-- Slide 2 -->
                     <div class="w-full flex-shrink-0 flex justify-center">
@@ -127,9 +126,14 @@
             </div>
 
             <!-- Left and Right Arrows -->
-            <button id="prev" class="absolute left-5 top-1/2 transform -translate-y-1/2 text-white px-4 py-2 text-9xl hover:bg-gray-600 focus:ring-0 outline-none">‹</button>
-            <button id="next" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-white px-4 py-2 text-9xl hover:bg-gray-600 focus:ring-0 outline-none">›</button>
+            <!-- Button dengan Tailwind CSS -->
+            <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-7xl flex items-center justify-center h-12 w-12 rounded-full bg-gray-700 hover:bg-gray-600 focus:outline-none">
+                <span class="leading-none relative -top-2">‹</span>
+            </button>
 
+            <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-7xl flex items-center justify-center h-12 w-12 rounded-full bg-gray-700 hover:bg-gray-600 focus:outline-none">
+                <span class="leading-none relative -top-2">›</span>
+            </button>
         </div>
 
 
@@ -137,9 +141,9 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Movie Card -->
             <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:bg-gray-700 cursor-pointer">
-                <img src="https://via.placeholder.com/150" alt="Movie Poster" class="w-full h-48 object-cover">
+                <img src="../dist/img_src/divergent.png" alt="Movie Poster" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold">Movie Title</h3>
+                    <h3 class="text-lg font-semibold">Divergent</h3>
                     <p class="text-gray-400">Year: 2023</p>
                     <p class="text-gray-400">Genre: Action, Drama</p>
                     <div class="flex items-center justify-between mt-2">
