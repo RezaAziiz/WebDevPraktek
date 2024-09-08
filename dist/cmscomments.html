@@ -5,81 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DramaKu - Admin Comments</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles to ensure the select options display correctly */
+        .text-yellow-500 {
+            color: #facc15;
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-white">
     <div class="flex">
-        <!-- Sidebar -->
-        <aside class="w-1/5 bg-gray-800 min-h-screen p-4">
-            <div class="mb-4 text-2xl font-bold">DramaKu</div>
-            <ul class="space-y-2">
-                <li><a href="#" class="block p-2 hover:bg-gray-700">Dramas</a></li>
-                <li><a href="cmscountries.html" class="block p-2 hover:bg-gray-700">Countries</a></li>
-                <li><a href="cmsawards.html" class="block p-2 hover:bg-gray-700">Awards</a></li>
-                <li><a href="#" class="block p-2 hover:bg-gray-700">Genres</a></li>
-                <li><a href="cmsactors.html" class="block p-2 hover:bg-gray-700">Actors</a></li>
-                <li><a href="cmscomments.html" class="block py-2 px-4 rounded bg-gray-700 hover:bg-gray-700">Comments</a></li>
-                <li><a href="cmsusers.html" class="block p-2 hover:bg-gray-700">Users</a></li>
-                <li><a href="#" class="block p-2 hover:bg-gray-700">Logout</a></li>
+        <aside class="w-64 bg-gray-800 p-4 h-screen fixed pt-4">
+            <div class="text-xl font-bold flex items-center">
+                <img src="../dist/img_src/logo.png" class="w-40 h-10 mr-2" />
+            </div>
+            <ul class="space-y-2 mt-5">
+                <!-- Other Menu Items -->
+                <li class="py-2 pl-4 text-gray-300 font-bold cursor-pointer hover:bg-gray-800 rounded-lg active:bg-gray-700">Drama</li> 
+                <li class="py-2 pl-4 text-gray-300 font-bold cursor-pointer hover:bg-gray-800 rounded-lg active:bg-gray-700">Countries</li>
+                <li class="py-2 pl-4 text-gray-300 font-bold cursor-pointer hover:bg-gray-800 rounded-lg active:bg-gray-700">Awards</li>
+                <li class="py-2 pl-4 text-gray-300 font-bold cursor-pointer hover:bg-gray-800 rounded-lg active:bg-gray-700">Genres</li>
+                <li class="py-2 pl-4 text-gray-300 font-bold cursor-pointer hover:bg-gray-800 rounded-lg active:bg-gray-700">Actor</li>
+                <li class="py-2 pl-4 text-gray-300 bg-gray-700 font-bold cursor-pointer hover:bg-gray-800 rounded-lg active:bg-gray-700"> Comments</li>
+                <li class="py-2 pl-4 text-gray-300 font-bold cursor-pointer hover:bg-gray-800 rounded-lg active:bg-gray-700">Users</li>
+                <li class="py-2 pl-4 text-gray-300 font-bold cursor-pointer hover:bg-gray-800 rounded-lg active:bg-gray-700">Logout</li>
             </ul>
         </aside>
 
         <!-- Main content -->
-        <main class="flex-1 p-4">
+        <main class="flex-1 p-4 ml-64">
             <!-- Filter and Controls -->
             <div class="flex justify-between mb-4">
-                <div>
+                <div class="flex items-center">
                     <label for="filter" class="mr-2">Filtered by:</label>
-                    <select id="filter" class="bg-gray-700 p-2 rounded text-white">
-                        <option>None</option>
+                    <select id="filter" class="bg-gray-700 text-white p-2 rounded">
+                        <option value="">None</option>
+                        <option value="5" class="text-yellow-500">★★★★★</option>
+                        <option value="4" class="text-yellow-500">★★★★</option>
+                        <option value="3" class="text-yellow-500">★★★</option>
+                        <option value="2" class="text-yellow-500">★★</option>
+                        <option value="1" class="text-yellow-500">★</option>
                     </select>
                 </div>
-                <div>
+                <div class="flex items-center">
                     <label for="shows" class="mr-2">Shows:</label>
                     <select id="shows" class="bg-gray-700 p-2 rounded text-white">
-                        <option>10</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
                     </select>
                 </div>
                 <input type="text" placeholder="Search..." class="bg-gray-700 p-2 rounded text-white">
             </div>
 
             <!-- Comments Table -->
-            <table class="w-full text-left border-collapse rounded">
-                <thead>
-                    <tr class="bg-gray-700">
+            <div id="table-container" class="overflow-y-auto rounded-xl">
+                <table class="min-w-full bg-gray-800 rounded-xl">
+                    <thead class="bg-purple-900">
+                    <tr>
                         <th class="p-3">Username</th>
                         <th class="p-3">Rate</th>
                         <th class="p-3">Drama</th>
                         <th class="p-3">Comments</th>
                         <th class="p-3">Status</th>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr class="bg-gray-800">
-                        <td class="p-3">
-                            <input type="checkbox" class="mr-2">Nara
-                        </td>
-                        <td class="p-3">
-                            ⭐⭐⭐⭐⭐
-                        </td>
-                        <td class="p-3">[2024] Japan - Eye Love You</td>
-                        <td class="p-3">
-                            I love this drama. It taught me a lot about money and finance...
-                        </td>
-                        <td class="p-3 text-red-500">Unapproved</td>
-                    </tr>
-                    <tr class="bg-gray-800">
-                        <td class="p-3">
-                            <input type="checkbox" class="mr-2">Luffy
-                        </td>
-                        <td class="p-3">
-                            ⭐⭐
-                        </td>
-                        <td class="p-3">[2024] Japan - Eye Love You</td>
-                        <td class="p-3">Meh</td>
-                        <td class="p-3 text-green-500">Approved</td>
-                    </tr>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- Rows will be inserted here -->
+                    </tbody>
+                </table>
+
+                <!-- Select All -->
+                <div class="flex items-center mt-4">
+                    <input type="checkbox" id="select-all" class="mr-2">
+                    <label for="select-all">Select All</label>
+                </div>
+            </div>
 
             <!-- Actions -->
             <div class="mt-4">
@@ -88,5 +88,62 @@
             </div>
         </main>
     </div>
+
+    <script>
+        // Example data
+        const commentsData = [
+            { username: 'Nara', rate: '⭐⭐⭐⭐⭐', drama: '[2024] Japan - Eye Love You', comments: 'I love this drama. It taught me a lot about money and finance...', status: 'Unapproved' },
+            { username: 'Luffy', rate: '⭐⭐', drama: '[2024] Japan - Eye Love You', comments: 'Meh', status: 'Approved' },
+            { username: 'Luffy', rate: '⭐⭐', drama: '[2024] Japan - Eye Love You', comments: 'Meh', status: 'Approved' },
+            { username: 'Luffy', rate: '⭐⭐', drama: '[2024] Japan - Eye Love You', comments: 'Meh', status: 'Approved' },
+            { username: 'Nara', rate: '⭐⭐⭐⭐⭐', drama: '[2024] Japan - Eye Love You', comments: 'I love this drama. It taught me a lot about money and finance...', status: 'Unapproved' },
+            { username: 'Nara', rate: '⭐⭐⭐⭐⭐', drama: '[2024] Japan - Eye Love You', comments: 'I love this drama. It taught me a lot about money and finance...', status: 'Unapproved' },
+            { username: 'Nara', rate: '⭐⭐⭐⭐⭐', drama: '[2024] Japan - Eye Love You', comments: 'I love this drama. It taught me a lot about money and finance...', status: 'Unapproved' },
+            { username: 'Luffy', rate: '⭐⭐', drama: '[2024] Japan - Eye Love You', comments: 'Meh', status: 'Approved' },
+            { username: 'Luffy', rate: '⭐⭐', drama: '[2024] Japan - Eye Love You', comments: 'Meh', status: 'Approved' },
+            { username: 'Luffy', rate: '⭐⭐', drama: '[2024] Japan - Eye Love You', comments: 'Meh', status: 'Approved' },
+            { username: 'Luffy', rate: '⭐⭐', drama: '[2024] Japan - Eye Love You', comments: 'Meh', status: 'Approved' },
+            { username: 'Luffy', rate: '⭐⭐', drama: '[2024] Japan - Eye Love You', comments: 'Meh', status: 'Approved' },
+            
+
+            // Add more rows as needed
+        ];
+
+        const tableBody = document.getElementById('table-body');
+        const tableContainer = document.getElementById('table-container');
+        const showsSelect = document.getElementById('shows');
+
+        function renderTable(rows) {
+    tableBody.innerHTML = '';
+    rows.forEach((row, index) => {
+        const isOddRow = index % 2 !== 0; // Check if the row index is odd
+        const rowClass = isOddRow ? 'bg-blue-900 hover:bg-blue-800' : 'bg-gray-700 hover:bg-gray-600';
+        
+
+        tableBody.innerHTML += `
+            <tr class="${rowClass}">
+                <td class="p-3">
+                    <input type="checkbox" class="mr-2">${row.username}
+                </td>
+                <td class="p-3">${row.rate}</td>
+                <td class="p-3">${row.drama}</td>
+                <td class="p-3">${row.comments}</td>
+                <td class="p-3 text-${row.status === 'Approved' ? 'green' : 'red'}-500">${row.status}</td>
+            </tr>
+        `;
+    });
+}
+
+
+        function updateTable() {
+            const showCount = parseInt(showsSelect.value, 10);
+            const visibleRows = commentsData.slice(0, showCount);
+            renderTable(visibleRows);
+            tableContainer.style.maxHeight = `${showCount * 40}px`; // Adjust height based on row count (40px per row)
+        }
+
+        showsSelect.addEventListener('change', updateTable);
+        updateTable(); // Initial call to populate the table
+    </script>
 </body>
 </html>
