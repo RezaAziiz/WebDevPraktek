@@ -38,10 +38,167 @@
         </aside>
 
         <!-- Main section -->
-        <main>
-            
+        <div class="flex-1 p-12 ml-64 pt-20">
+            <!-- Input Form -->
+            <div class="grid grid-cols-3 gap-8">
+                <div class="col-span-1">
+                    <!-- Image Upload Section -->
+                    <div id="image-upload-section" class="relative w-full h-64 rounded-xl mb-4 bg-gray-100 flex items-center justify-center">
+                        <label for="upload-image" id="upload-label" class="cursor-pointer flex flex-col items-center justify-center w-full h-full">
+                            <!-- Display this text if there's no image -->
+                            <span id="upload-text" class="text-gray-400">Click to upload movie poster</span>
+                        </label>
+                        <img id="preview-image" src="" alt="" class="absolute inset-0 w-full h-full rounded-xl object-cover hidden">
+                        <input type="file" id="upload-image" class="hidden" accept="image/*" onchange="loadFile(event)">
+                        
+                        <!-- Cancel Button -->
+                        <button id="cancel-button" class="hidden absolute top-2 right-2 bg-red-600 text-white px-2 py-1 rounded" onclick="cancelImage()">Cancel</button>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <div class="flex justify-center">
+                        <button type="submit" class="p-1 bg-teal-600 w-20 rounded-xl text-white hover:bg-teal-700">Submit</button>
+                    </div>
+                </div>
+                
+                
+                <!-- Right Column -->
+                <div class="col-span-2 grid grid-cols-2 gap-4">
+                    <!-- Title and Alt Title -->
+                    <div class="col-span-2 grid grid-cols-2 gap-4">
+                        <input type="text" placeholder="Title" class="bg-gray-100 p-2 rounded-full w-full text-black">
+                        <input type="text" placeholder="Alternative Title" class="bg-gray-100 p-2 rounded-full w-full text-black">
+                    </div>
+    
+                    <!-- Year and Country -->
+                    <div class="grid grid-cols-3 gap-4">
+                        <select class="bg-gray-100 p-2 rounded-full w-full text-black">
+                            <option value="" disabled selected>Year</option>
+                            <!-- Tambahkan opsi tahun di sini -->
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <!-- dan seterusnya -->
+                        </select>
+                        
+                        <select class="bg-gray-100 p-2 rounded-full w-full text-black col-span-2">
+                            <option value="" disabled selected>Country</option>
+                            <!-- Tambahkan opsi negara di sini -->
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="USA">USA</option>
+                            <option value="Japan">Japan</option>
+                            <!-- dan seterusnya -->
+                        </select>
+                    </div>
+    
+                    <!-- Synopsis -->
+                    <div class="col-span-2">
+                        <textarea placeholder="Synopsis" rows="4" class="bg-gray-100 p-2 rounded-xl w-full text-black resize-none"></textarea>
+                    </div>
+    
+                    <!-- Availability -->
+                    <input type="text" placeholder="Availability" class="col-span-2 bg-gray-100 p-2 rounded-full w-full">
+    
+                    <!-- Genres -->
+                    <div class="col-span-2">
+                        <div class="grid grid-cols-4 gap-4 p-4 border border-gray-100 rounded-xl">
+                            <!-- Custom checkbox styling -->
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" class="form-checkbox h-6 w-6">
+                                <span>Adventure</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" class="form-checkbox h-6 w-6">
+                                <span>Romance</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" class="form-checkbox h-6 w-6">
+                                <span>Drama</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" class="form-checkbox h-6 w-6">
+                                <span>Slice of Life</span>
+                            </label>
+                            <!-- Add more genres as needed -->
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" class="form-checkbox h-6 w-6">
+                                <span>Action</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" class="form-checkbox h-6 w-6">
+                                <span>Comedy</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" class="form-checkbox h-6 w-6">
+                                <span>Fantasy</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" class="form-checkbox h-6 w-6">
+                                <span>Science Fiction</span>
+                            </label>
+                            <!-- Continue adding genres as necessary -->
+                        </div>
+                    </div>
+                    
+                    <!-- Add Actors -->
+                    <div class="col-span-2">
+                        <!-- Search Input -->
+                        <input type="text" placeholder="Search Actor Names" class="bg-gray-100 p-2 rounded-full w-full mb-1 text-black">
+                    
+                        <!-- Selected Actors Section -->
+                        <div class="mt-1 p-2 grid grid-cols-3 sm:grid-cols-9 gap-4" id="selected-actors">
+                            <!-- Example Actor -->
+                            <div class="flex flex-col items-center relative">
+                                <div class="w-20 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                                    <!-- <img src="../dist/img_src/actor1.png" class="w-full h-full object-cover"> -->
+                                </div>
+                                <p class="text-gray-300 text-sm text-center">Actor 1</p>
+                                <button class="absolute top-1 right-1 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm" onclick="removeActor(this)">×</button>
+                            </div>
 
-        </main>
+                            <div class="flex flex-col items-center relative">
+                                <div class="w-20 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                                    <!-- <img src="../dist/img_src/actor1.png" class="w-full h-full object-cover"> -->
+                                </div>
+                                <p class="text-gray-300 text-sm text-center">Actor 2</p>
+                                <button class="absolute top-1 right-1 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm" onclick="removeActor(this)">×</button>
+                            </div>
+
+                            <div class="flex flex-col items-center relative">
+                                <div class="w-20 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                                    <!-- <img src="../dist/img_src/actor1.png" class="w-full h-full object-cover"> -->
+                                </div>
+                                <p class="text-gray-300 text-sm text-center">Actor 3</p>
+                                <button class="absolute top-1 right-1 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm" onclick="removeActor(this)">×</button>
+                            </div>
+
+                            <div class="flex flex-col items-center relative">
+                                <div class="w-20 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                                    <!-- <img src="../dist/img_src/actor1.png" class="w-full h-full object-cover"> -->
+                                </div>
+                                <p class="text-gray-300 text-sm text-center">Actor 4</p>
+                                <button class="absolute top-1 right-1 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm" onclick="removeActor(this)">×</button>
+                            </div>
+                         
+                    
+                            <!-- More actors will be dynamically added here -->
+                        </div>
+                    </div>
+    
+                    <!-- Trailer and Award -->
+                    <div class="grid grid-cols-2 gap-4 col-span-2 relative">
+                        <input type="text" placeholder="Link Trailer" class="bg-gray-100 p-2 rounded-full w-full text-black">
+                        <select class="bg-gray-100 p-2 rounded-full w-full text-black z-10">
+                            <option value="" disabled selected>Award</option>
+                            <option value="2024">Award 1</option>
+                            <option value="2023">Award 2</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         
     </div>
 
@@ -49,6 +206,58 @@
         function toggleSubMenu(id) {
             const subMenu = document.getElementById(id);
             subMenu.classList.toggle('hidden');
+        }
+
+        const loadFile = (event) => {
+            const image = document.getElementById('preview-image');
+            const text = document.getElementById('upload-text');
+            const label = document.getElementById('upload-label');
+            const cancelButton = document.getElementById('cancel-button');
+    
+            const reader = new FileReader();
+            reader.onload = () => {
+                image.src = reader.result;
+                image.classList.remove('hidden'); // Show image
+                text.classList.add('hidden');     // Hide text
+                label.classList.remove('flex');   // Remove flex to prevent label from stretching the area
+                cancelButton.classList.remove('hidden'); // Show cancel button
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        };
+    
+        // Function to cancel the image upload
+        const cancelImage = () => {
+            const image = document.getElementById('preview-image');
+            const text = document.getElementById('upload-text');
+            const label = document.getElementById('upload-label');
+            const cancelButton = document.getElementById('cancel-button');
+            const input = document.getElementById('upload-image');
+    
+            input.value = ""; // Clear the file input
+            image.src = "";
+            image.classList.add('hidden');      // Hide image
+            text.classList.remove('hidden');    // Show text
+            label.classList.add('flex');        // Restore flex to label
+            cancelButton.classList.add('hidden');  // Hide cancel button
+        };
+
+        function addActor(actorName, actorImage) {
+            const container = document.getElementById('selected-actors');
+            const actorDiv = document.createElement('div');
+            actorDiv.className = 'flex flex-col items-center relative';
+            actorDiv.innerHTML = `
+                <div class="w-20 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                    <img src="${actorImage}" class="w-full h-full object-cover">
+                </div>
+                <p class="text-gray-300 text-sm text-center">${actorName}</p>
+                <button class="absolute top-0 right-0 mt-2 mr-2 text-red-500 hover:text-red-700" onclick="removeActor(this)">×</button>
+            `;
+            container.appendChild(actorDiv);
+        }
+    
+        function removeActor(button) {
+            const actorDiv = button.parentElement;
+            actorDiv.remove();
         }
     </script>
 

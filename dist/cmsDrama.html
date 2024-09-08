@@ -80,18 +80,7 @@
                         <td class="py-2 px-3">I love this drama. It taught me a lot about money and finance. Love is not everything. We need to face the reality too. Being stoic is the best.</td>
                         <td class="py-2 px-3 text-center">Unapproved</td>
                         <td class="py-2 px-3 text-red-500">
-                            <a href="#" class="hover:underline">Edit</a> | <a href="#" class="hover:underline">Delete</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-gray-800 text-white">
-                        <td class="py-2 px-3 w-5">2</td>
-                        <td class="py-2 px-3">[2024] Japan - Eye Love You</td>
-                        <td class="py-2 px-3">Takuya Kimura, Takeuchi Yuko, Neinen Reina</td>
-                        <td class="py-2 px-3 text-center">Romance, Adventures, Comedy</td>
-                        <td class="py-2 px-3">I love this drama. It taught me a lot about money and finance. Love is not everything. We need to face the reality too. Being stoic is the best.</td>
-                        <td class="py-2 px-3 text-center">Unapproved</td>
-                        <td class="py-2 px-3 text-red-500">
-                            <a href="#" class="hover:underline">Edit</a> | <a href="#" class="hover:underline">Delete</a>
+                            <a href="#" class="hover:underline" onclick="openModal()">Edit</a> | <a href="#" class="hover:underline">Delete</a>
                         </td>
                     </tr>
                 </tbody>
@@ -100,7 +89,139 @@
         
     </div>
 
+    <!-- Modal -->
+    <div id="editModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" onclick="closeModalOutside(event)">
+        <div class="bg-gray-700 text-white rounded-lg w-3/4 max-w-5xl p-4" onclick="event.stopPropagation()">
+            <!-- Modal Content -->
+
+            <!-- Action Buttons -->
+            <div class="flex justify-center mb-4">
+                <button type="approved" class="bg-teal-600 rounded-xl text-white hover:bg-teal-700 py-1 px-4 mr-2">Approve</button>
+                <button type="delete" class="bg-red-500 rounded-xl text-white hover:bg-red-600 py-1 px-4 mr-2">Delete</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-4 items-center">
+                <!-- Left Section -->
+                <div class="flex justify-center md:justify-start">
+                    <div class="w-72 h-48 rounded-lg shadow-lg overflow-hidden">
+                        <img src="../dist/img_src/divergent.png" alt="Movie Poster" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            
+                <!-- Right Section -->
+                <div>
+                    <h3 class="text-lg font-bold mb-2">Title of the drama that makes two lines</h3>
+                    <p class="text-gray-300 mb-2">Other titles: Title 2, Title 3, Title 4</p>
+                    <p class="text-gray-300 mb-2">Year: 2024</p>
+                    <p class="text-gray-300 mb-2">Synopsis: In a world divided by factions based on virtues, Tris learns she's Divergent and won't fit in. When she discovers a plot to destroy Divergents, Tris and the mysterious Four must find out what makes Divergents dangerous.</p>
+                    <p class="text-gray-300 mb-2">Genre: Genre 1, Genre 2, Genre 3</p>
+                    <p class="text-gray-300 mb-2">Rating: 3.5/5</p>
+                    <p class="text-gray-300 mb-2">Availability: Fansub: @eoisub on X</p>
+                </div>
+            </div>
+
+            <!-- Cast Section -->
+            <div class="mt-4 grid grid-cols-3 sm:grid-cols-9 gap-4">
+                <!-- Actor 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                        <!-- <img src="../dist/img_src/actor1.png"class="w-full h-full object-cover"> -->
+                    </div>
+                    <p class="text-gray-300 text-sm text-center">Actor 1</p>
+                </div>
+
+                <!-- Actor 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                        <!-- <img src="../dist/img_src/actor1.png"class="w-full h-full object-cover"> -->
+                    </div>
+                    <p class="text-gray-300 text-sm text-center">Actor 2</p>
+                </div>
+
+                <!-- Actor 3 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                        <!-- <img src="../dist/img_src/actor1.png"class="w-full h-full object-cover"> -->
+                    </div>
+                    <p class="text-gray-300 text-sm text-center">Actor 3</p>
+                </div>
+                
+                <!-- Actor 4 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                        <!-- <img src="../dist/img_src/actor1.png"class="w-full h-full object-cover"> -->
+                    </div>
+                    <p class="text-gray-300 text-sm text-center">Actor 4</p>
+                </div>
+
+                <!-- Actor 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                        <!-- <img src="../dist/img_src/actor1.png"class="w-full h-full object-cover"> -->
+                    </div>
+                    <p class="text-gray-300 text-sm text-center">Actor 5</p>
+                </div>
+
+                <!-- Actor 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                        <!-- <img src="../dist/img_src/actor1.png"class="w-full h-full object-cover"> -->
+                    </div>
+                    <p class="text-gray-300 text-sm text-center">Actor 6</p>
+                </div>
+
+                <!-- Actor 3 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                        <!-- <img src="../dist/img_src/actor1.png"class="w-full h-full object-cover"> -->
+                    </div>
+                    <p class="text-gray-300 text-sm text-center">Actor 7</p>
+                </div>
+                
+                <!-- Actor 4 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                        <!-- <img src="../dist/img_src/actor1.png"class="w-full h-full object-cover"> -->
+                    </div>
+                    <p class="text-gray-300 text-sm text-center">Actor 8</p>
+                </div>
+
+                <!-- Actor 4 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                        <!-- <img src="../dist/img_src/actor1.png"class="w-full h-full object-cover"> -->
+                    </div>
+                    <p class="text-gray-300 text-sm text-center">Actor 9</p>
+                </div>
+                
+            </div>
+
+            <!-- Video Section -->
+            <div class="mt-4 bg-gray-200 rounded-lg flex items-center justify-center w-2/4 h-72 mx-auto">
+                <!-- <img src="../dist/img_src/divergent.png" alt="Drama Video" class="rounded shadow-lg"> -->
+            </div>
+
+        </div>
+    </div>
+
     <script>
+        // JavaScript to handle modal open and close
+        function openModal() {
+            document.getElementById('editModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('editModal').classList.add('hidden');
+        }
+
+        // Function to close modal when clicking outside the modal content
+        function closeModalOutside(event) {
+            if (event.target.id === 'editModal') {
+                closeModal();
+            }
+        }
+
+        // Function to toggle submenu visibility
         function toggleSubMenu(id) {
             const subMenu = document.getElementById(id);
             subMenu.classList.toggle('hidden');
