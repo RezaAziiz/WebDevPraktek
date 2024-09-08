@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <nav class="flex justify-between items-center bg-gray-900 p-4">
+         <!-- Logo and DramaKu text moved to the left -->
+         <div class="text-xl font-bold flex items-center">
+            <img src="../src/templates/logo.png" class="w-12 h-12 mr-2" />
+            DramaKu
+        </div>
+    
+        <div class="relative flex items-center">
+            <input type="text" placeholder="Maze Runner" class="w-96 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10">
+            <button id="filterButton" class="ml-2 bg-gray-700 text-white px-4 py-2 rounded-full relative">Filter</button>
+        
+            <!-- Dropdown Menu for Filters -->
+            <div class="absolute right-0 mt-2 w-full bg-gray-700 rounded-lg shadow-lg z-10 hidden" id="filterDropdown" style="top: 100%; right: 0;">
+                <div class="p-4">
+                    <h4 class="text-lg font-semibold text-white">Filter by:</h4>
+                    <div class="grid grid-cols-12 gap-4 mt-4">
+                        <!-- Genre Filter -->
+                        <div class="col-span-4">
+                            <label class="block text-white">Genre</label>
+                            <select class="w-full p-2 bg-gray-900 rounded">
+                                <option value="Action">Action</option>
+                                <option value="Comedy">Comedy</option>
+                                <option value="Drama">Drama</option>
+                                <option value="Fantasy">Fantasy</option>
+                                <option value="Horror">Horror</option>
+                                <!-- Add more options if needed -->
+                            </select>
+                        </div>
+        
+                        <!-- Country Filter -->
+                        <div class="col-span-4">
+                            <label class="block text-white">Country</label>
+                            <select class="w-full p-2 bg-gray-900 rounded">
+                                <option value="USA">USA</option>
+                                <option value="Korea">Korea</option>
+                                <option value="Japan">Japan</option>
+                                <option value="China">China</option>
+                                <!-- Add more options -->
+                            </select>
+                        </div>
+        
+                        <!-- Year Filter -->
+                        <div class="col-span-4">
+                            <label class="block text-white">Year</label>
+                            <select class="w-full p-2 bg-gray-900 rounded">
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                            </select>
+                        </div>
+        
+                        <!-- Availability Filter -->
+                        <div class="col-span-4">
+                            <label class="block text-white">Availability</label>
+                            <select class="w-full p-2 bg-gray-900 rounded">
+                                <option value="Available">Available</option>
+                                <option value="Coming Soon">Coming Soon</option>
+                            </select>
+                        </div>
+        
+                        <!-- Award Filter -->
+                        <div class="col-span-4">
+                            <label class="block text-white">Award</label>
+                            <select class="w-full p-2 bg-gray-900 rounded">
+                                <option value="Won">Won</option>
+                                <option value="Nominated">Nominated</option>
+                            </select>
+                        </div>
+        
+                        <!-- Status Filter -->
+                        <div class="col-span-4">
+                            <label class="block text-white">Status</label>
+                            <select class="w-full p-2 bg-gray-900 rounded">
+                                <option value="Released">Released</option>
+                                <option value="Upcoming">Upcoming</option>
+                            </select>
+                        </div>
+        
+                        <!-- Sort Alphabetically Filter -->
+                        <div class="col-start-4 col-end-9">
+                            <label class="block text-white">Sort Alphabetically</label>
+                            <select class="w-full p-2 bg-gray-900 rounded">
+                                <option value="A-Z">A-Z</option>
+                                <option value="Z-A">Z-A</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+        <button class="bg-blue-500 text-white px-3 py-2 rounded-full">Login</button>
+    </nav>
+    
+
+    <main class="p-6 pt-1 max-w-4xl mx-auto">
+        <!-- List Container -->
+        <div class="space-y-4">
+            <!-- Drama Card -->
+            <div class="flex items-start bg-gray-900 rounded-lg p-4 shadow-md hover:bg-gray-800 hover:shadow-lg transition duration-300 ease-in-out cursor-pointer">
+                <img src="https://via.placeholder.com/80x100" alt="Drama Poster" class="w-72 h-48 object-cover rounded-xl mr-4">
+                <div class="flex-1 flex flex-col justify-between">
+                    <div class="mb-2 space-y-1">
+                        <h3 class="text-lg font-semibold">Title of the drama 1 that makes two lines</h3>
+                        <p class="text-gray-400">2024</p>
+                        <p class="text-gray-400">Genre 1, Genre 2, Genre 3</p>
+                        <p class="text-gray-400">Actor 1, Actor 2, Actor 3</p>
+                    </div>
+                    <div class="flex justify-between items-end space-y-10">
+                        <p class="text-yellow-400">⭐ 8.5</p>
+                        <p class="text-gray-400">Views: 1.2M</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat similar structure for more items -->
+            <div class="flex items-start bg-gray-900 rounded-lg p-4 shadow-md hover:bg-gray-800 hover:shadow-lg transition duration-300 ease-in-out cursor-pointer">
+                <img src="https://via.placeholder.com/80x100" alt="Drama Poster" class="w-72 h-48 object-cover rounded-xl mr-4">
+                <div class="flex-1 flex flex-col justify-between">
+                    <div class="mb-2 space-y-1">
+                        <h3 class="text-lg font-semibold">Title of the drama 1 that makes two lines</h3>
+                        <p class="text-gray-400">2024</p>
+                        <p class="text-gray-400">Genre 1, Genre 2, Genre 3</p>
+                        <p class="text-gray-400">Actor 1, Actor 2, Actor 3</p>
+                    </div>
+                    <div class="flex justify-between items-end space-y-10">
+                        <p class="text-yellow-400">⭐ 8.5</p>
+                        <p class="text-gray-400">Views: 1.2M</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-start bg-gray-900 rounded-lg p-4 shadow-md hover:bg-gray-800 hover:shadow-lg transition duration-300 ease-in-out cursor-pointer">
+                <img src="https://via.placeholder.com/80x100" alt="Drama Poster" class="w-72 h-48 object-cover rounded-xl mr-4">
+                <div class="flex-1 flex flex-col justify-between">
+                    <div class="mb-2 space-y-1">
+                        <h3 class="text-lg font-semibold">Title of the drama 1 that makes two lines</h3>
+                        <p class="text-gray-400">2024</p>
+                        <p class="text-gray-400">Genre 1, Genre 2, Genre 3</p>
+                        <p class="text-gray-400">Actor 1, Actor 2, Actor 3</p>
+                    </div>
+                    <div class="flex justify-between items-end space-y-10">
+                        <p class="text-yellow-400">⭐ 8.5</p>
+                        <p class="text-gray-400">Views: 1.2M</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Show or hide the filter modal
+    const filterButton = document.getElementById('filterButton');
+    const filterDropdown = document.getElementById('filterDropdown');
+
+    filterButton.addEventListener('click', () => {
+        filterDropdown.classList.toggle('hidden');
+    });
+
+    // Close the filter dropdown when clicking outside of it
+    window.addEventListener('click', function(event) {
+        if (!filterDropdown.contains(event.target) && !filterButton.contains(event.target)) {
+            filterDropdown.classList.add('hidden');
+        }
+    });
+
+    // Slider functionality
+    const slider = document.getElementById('slider');
+    const next = document.getElementById('next');
+    const prev = document.getElementById('prev');
+
+    let currentSlide = 0;
+    const totalSlides = slider.children.length;
+
+    function updateSliderPosition() {
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    next.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSliderPosition();
+    });
+
+    prev.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSliderPosition();
+    });
+
+    // Auto-slide every 5 seconds
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSliderPosition();
+    }, 5000);
+    </script>
+
+</body>
+
+</html>
